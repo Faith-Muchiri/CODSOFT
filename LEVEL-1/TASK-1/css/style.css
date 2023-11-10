@@ -1,121 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* RESET */
 *,
 *::after,
 *::before {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Poppins', sans-serif;
-   list-style: none;
-   text-decoration: none;
-   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-
 /* VARIABLES */
-:root{
-    --main-color:#ff702a;
-    --text-color:#fff;
-    --bg-color:#1e1c2a;
-    --big-font:5rem;
-    --h2-font:2.25rem;
-    --p-font:0.9rem
+:root {
+  --main-color: #ff702a;
+  --text-color: #fff;
+  --bg-color: #1e1c2a;
+  --big-font: 5rem;
+  --h2-font: 2.25rem;
+  --p-font: 0.9rem;
 }
 
 *::selection {
-    background: var(--main-color);
-    color: var(--text-color);
+  background: var(--main-color);
+  color: var(--text-color);
 }
 
-body{
-    color:var(--text-color);
-    background: var(--bg-color);
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
 }
 
 section {
-    padding: 70px 10%;
+  padding: 70px 10%;
 }
 
 /* header styles */
-header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 170px;
-    background: var(--bg-color);
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 170px;
+  background: var(--bg-color);
 }
 
-.logo{
-    color: var(--main-color);
-    font-style: italic;
-    font-weight: 600;
-    font-size: 2.4rem;
+.logo {
+  color: var(--main-color);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.4rem;
 }
 .navbar {
-    display: flex;
+  display: flex;
 }
-.navbar a{
-    color: var(--text-color);
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    font-weight: 500;
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  font-weight: 500;
 }
-.navbar a:hover{
-    color: var(--main-color);
-    transition: .4s;
-} 
+.navbar a:hover {
+  color: var(--main-color);
+  transition: 0.4s;
+}
 
-#menu-icon{
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
 }
 
 /* hero section */
-.hero-section{
-    width: 100%;
-    min-height: 100vh;
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 600px;
+}
+
+.hero-text h1 {
+  font-size: var(--big-font);
+  color: var(--main-color);
+}
+
+.hero-text h2 {
+  font-size: var(--h2-font);
+  margin: 1rem 0 2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: var(--text-color);
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateY(10px);
+  transition: ease-in-out 0.5s;
+}
+
+/* about section */
+.about-section{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap:1.5rem;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 1.5rem;
     align-items: center;
 }
 
-.hero-img img{
-    width: 600px;
+.about-img img{
+    width: 480px;
 }
-
-.hero-text h1{
-    font-size: var(--big-font);
+.about-text span{
     color: var(--main-color);
+    font-weight: 600;
 }
-
-.hero-text h2{
+.about-text h2{
     font-size: var(--h2-font);
-    margin: 1rem 0 2rem;
 }
-.btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color );
-    color: var(--text-color);
-    border-radius:0.5rem ;
-}
-.btn:hover{
- cursor: pointer;
- transform: scale(1.1) translateY(10px);
- transition: ease-in-out .5s;
+.about-text p{
+    margin: 0.8rem 0 1.8rem;
+    line-height: 1.7;
 }

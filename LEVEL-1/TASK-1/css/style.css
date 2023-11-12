@@ -328,7 +328,7 @@ header {
   section {
     padding: 50px 8%;
   }
-  menu-icon {
+  #menu-icon {
     display: initial;
     color: var(--text-color);
   }
@@ -380,4 +380,49 @@ header {
     .col{
          width: 100%;
     }
+}
+
+
+/* animation */
+/* Apply the animation to the hero section */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-section {
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-section {
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu_section {
+  animation: slideUp 1s ease-out;
 }
